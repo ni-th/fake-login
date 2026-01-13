@@ -29,6 +29,7 @@ const FacebookLoginPage = () => {
             </div>
           </div>
 
+
           {/* Right Column - Login Form */}
           <div className="w-full md:w-1/2 max-w-md">
             <div className="bg-white rounded-lg shadow-lg p-6">
