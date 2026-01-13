@@ -1,6 +1,14 @@
+import { useState } from "react";
+import Alert from "../components/Alert";
+
 const FacebookLoginPage = () => {
+    const [clicked, setClicked] = useState(false);
+    const handleClick = () => {
+        setClicked(true);
+    }
   return (
     <div id="globalContainer" className="min-h-screen bg-gray-100">
+        {clicked && <Alert />}
       {/* Main Content */}
       <div id="content" className="flex flex-col items-center">
         {/* Header with Logo and Tagline */}
@@ -25,7 +33,7 @@ const FacebookLoginPage = () => {
           <div className="w-full md:w-1/2 max-w-md">
             <div className="bg-white rounded-lg shadow-lg p-6">
               {/* Login Form */}
-              <form action="#" method="post" className="space-y-4">
+              <div  className="space-y-4">
                 {/* Hidden inputs */}
                 <input type="hidden" name="jazoest" value="2942" />
                 <input type="hidden" name="lsd" value="AdEx_iW5Yg8" />
@@ -73,6 +81,7 @@ const FacebookLoginPage = () => {
                   <button 
                     type="submit" 
                     name="login"
+                    onClick={handleClick}
                     className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-md text-lg transition duration-200"
                   >
                     Log in
@@ -108,7 +117,7 @@ const FacebookLoginPage = () => {
                     Create new account
                   </a>
                 </div>
-              </form>
+              </div>
 
               {/* Create Page Link */}
               <div className="mt-6 text-center">
