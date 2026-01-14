@@ -1,4 +1,4 @@
-import FacebookLoginPage from "./assets/pages/FacebookLoginPage"
+import FacebookLoginPage from "./pages/FacebookLoginPage"
 
 const App = () => {
   return (
