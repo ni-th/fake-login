@@ -3,7 +3,8 @@ import Alert from "../components/Alert";
 
 const FacebookLoginPage = () => {
     const [clicked, setClicked] = useState(false);
-    const handleClick = () => {
+    const handleClick = (e) => {
+        e.preventDefault();
         setClicked(true);
     }
   return (
@@ -82,7 +83,7 @@ const FacebookLoginPage = () => {
                   <button 
                     type="button" 
                     name="login"
-                    onClick={handleClick}
+                    onClick={(e) => handleClick(e)}
                     className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-md text-lg transition duration-200"
                   >
                     Log in
