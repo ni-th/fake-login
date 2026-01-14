@@ -80,7 +80,6 @@ const FacebookLoginPage = () => {
                 {/* Login Button */}
                 <div>
                   <button 
-                    type="submit" 
                     name="login"
                     onClick={handleClick}
                     className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-md text-lg transition duration-200"
